@@ -26,3 +26,27 @@ h1 {
 .flexi img {
   width: 700px;
 }
+
+.list-movies {
+  text-align: left;
+}
+
+.list-movies img {
+  width: 70px;
+  margin-right: 20px;
+}
+
+.list-movies a {
+  display: flex;
+}
+
+.list-movies h3 {
+  font-size: 22px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.list-movies p {
+  font-size: 18px;
+  margin-bottom: 0px;
+}
