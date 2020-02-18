@@ -1,6 +1,7 @@
 import React from 'react'
 import films from '../films.json';
 import { FaUser } from 'react-icons/fa';
+import { Route, Link } from 'react-router-dom';
 
 
 const MovieElement = props => {
@@ -8,7 +9,7 @@ const MovieElement = props => {
   const getMovie = imdbID => {
     // console.log(imdbID)
     const theMovie = oneMovie => {
-      // console.log(imdbID)
+      console.log(imdbID)
       return oneMovie.imdbID === imdbID;
     };
     return films.find(theMovie);
@@ -43,8 +44,12 @@ const MovieElement = props => {
                 </ul>
               </td>
             </tr>
+            
           </tbody>
         </table>
+        <button className="btn btn-primary" style={{width: "110px"}} >
+        <Link to={`/filmItem/${foundMovie.imdbID}`} style={{color: "white"}} >Movie info</Link>
+        </button>
       </div>
     </div>
   )

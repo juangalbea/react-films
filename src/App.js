@@ -15,7 +15,7 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
         <Route path='/films' component={Movies} />
-        <Route path='/filmItem' component={MovieItem} />
+        <Route path="/filmItem/:imdbID" component={MovieItem} />
       </Switch>
     </div>
   );

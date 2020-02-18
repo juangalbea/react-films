@@ -16,7 +16,7 @@ export class Navbar extends Component {
                         <li className="nav-item active" style={{margin: "10px 20px"}} ><Link to='/'>Home</Link></li>
                         <li className="nav-item active" style={{margin: "10px 20px"}} ><Link to='/about'>About</Link></li>
                         <li className="nav-item active" style={{margin: "10px 20px"}} ><Link to='/films'>Movies</Link></li>
-                        <li className="nav-item active" style={{margin: "10px 20px"}} ><Link to='/filmItem'>Movie</Link></li>
+                        {/* <li className="nav-item active" style={{margin: "10px 20px"}} ><Link to='/filmItem'>Movie</Link></li> */}
                         {/* <li className="nav-item">
                             <a className="nav-link" href="#">Link</a>
                         </li>
