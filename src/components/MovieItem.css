@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.title h1 {
+  
+}
+
+.header {
+  display: flex;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+}
+
+.poster img {
+  width: 150px;
+  margin-right: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  text-align: left;
+  margin: 10px;
+}
+
+.images img {
+  height: 200px;
+  margin: 10px;
+}
+
+.content div {
+  margin: 20px;
+  width: 440px;
+}
+
+li b {
+  margin-right: 8px;
+}
