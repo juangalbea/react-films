@@ -1,6 +1,7 @@
 import React from 'react'
 import films from '../films.json';
 import './MovieItem.css'
+import ModalPoster from './ModalPoster';
 
 const MovieItem = props => {
   // console.log(props)
@@ -18,7 +19,8 @@ const MovieItem = props => {
     <div className="container">
       <div className="header">
         <div className="poster">
-          <img src={foundMovie.PosterBig} alt="" />
+          {/* <img src={foundMovie.PosterBig} alt="" /> */}
+          <ModalPoster thePoster={foundMovie.PosterBig} />
         </div>
         <div className="info">
           <div className="title">
