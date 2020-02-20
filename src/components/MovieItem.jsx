@@ -2,6 +2,7 @@ import React from 'react'
 import films from '../films.json';
 import './MovieItem.css'
 import ModalPoster from './ModalPoster';
+import ModalImages from './ModalImages';
 
 const MovieItem = props => {
   // console.log(props)
@@ -31,7 +32,7 @@ const MovieItem = props => {
               <ul>
                 <li><b>Year: </b> {foundMovie.Released}</li>
                 <li><b>Running time: </b> {foundMovie.Runtime}</li>
-                <li><b>Countre: </b> {foundMovie.Country}</li>
+                <li><b>Country: </b> {foundMovie.Country}</li>
                 <li><b>Genre: </b> {foundMovie.Genre}</li>
                 <li><b>Language: </b> {foundMovie.Language}</li>
                 <li><b>Director: </b> {foundMovie.Director}</li>
@@ -48,9 +49,7 @@ const MovieItem = props => {
         </div>
       </div>
       <div className="images">
-        {foundMovie.Images.map((image, idx) => (
-          <img key={idx} src={image} alt="" />
-        ))}
+        <ModalImages theImages={foundMovie.Images} />
       </div>
     </div>
   )

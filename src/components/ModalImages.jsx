@@ -9,14 +9,14 @@ import 'react-image-lightbox/style.css'; // This only needs to be imported once 
 //     '//placekitten.com/1500/1500',
 // ];
 
-export default class LightboxExample extends Component {
+export default class ModalImages extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       photoIndex: 0,
       isOpen: false,
-      images: [props.thePoster]
+      images: props.theImages
     };
 
   }
@@ -26,9 +26,13 @@ export default class LightboxExample extends Component {
 
     return (
       <div>
-        <a type="button" onClick={() => this.setState({ isOpen: true })} style={{marginRight: "20px"}}>
-          <img src={this.state.images} alt="" />
-        </a>
+        
+        {this.state.images.map((image, idx) => (
+          <a type="button" onClick={() => this.setState({ isOpen: true, photoIndex: idx })} style={{margin: "10px"}}>
+          <img key={idx} src={image} alt="" />
+          </a>
+        ))}
+        
 
         {isOpen && (
           <Lightbox

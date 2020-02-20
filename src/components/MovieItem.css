@@ -23,7 +23,6 @@
 
 .poster img {
   width: 150px;
-  margin-right: 20px;
 }
 
 ul {
@@ -37,7 +36,7 @@ ul li {
 
 .images img {
   height: 200px;
-  margin: 10px;
+  
 }
 
 .content div {

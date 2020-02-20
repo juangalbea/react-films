@@ -5,6 +5,41 @@ import { Link } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 
 export class Movies extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      movieList: films,
+      search: ""
+    }
+    console.log(this.state.movieList)
+  }
+
+  // SearchMovie(e) {
+  //   let searchtext = e.target.value;
+  //   let clonedArray = { ...this.state };
+    
+  //   let filteredArray = clonedArray.movieList.filter(movie => {
+  //     // console.log(movie.name.toLowerCase().indexOf(searchtext.toLowerCase()))
+  //     return movie.Title.toLowerCase().indexOf(searchtext.toLowerCase()) >= 0;
+  //   });
+
+  //   console.log(clonedArray)
+  //   this.setState(
+  //     {
+  //       ...this.state,
+  //       movieList: filteredArray
+  //     },
+  //     () => {
+  //       this.state.movieList = [...clonedArray.movieList];
+  //     }
+  //   );
+  // }
+
+  SearchMovie = (e) => {
+    let filteredMovie = films.filter(movie => movie.Title.toUpperCase().includes(e.target.value.toUpperCase()));
+    this.setState({ movieList: filteredMovie });
+  }
+
   render() {
     return (
       <div>
@@ -13,13 +48,20 @@ export class Movies extends Component {
             <nav className="navbar navbar-dark bg-primary mb-3">
               <div className="container">
                 <a className="navbar-brand" href="/">Movie List</a>
+                        <input 
+                        className="form-control mr-sm-2" 
+                        type="text" value={this.value} 
+                        defaultValue="" 
+                        placeholder="Search" 
+                        aria-label="Search" 
+                        onChange={e => this.SearchMovie(e)} />        
               </div>
             </nav>
             <div className="container">
               <div className="row">
                 <div className="col-" style={{ maxHeight: '80vh', overflow: 'scroll' }}>
                   <div className="list-group">
-                    {films.map((film, idx) => {
+                    {this.state.movieList.map((film, idx) => {
                       return (
                         <div key={idx} className="list-movies">
 
