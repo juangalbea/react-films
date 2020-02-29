@@ -17,7 +17,7 @@ export class Movies extends Component {
   // SearchMovie(e) {
   //   let searchtext = e.target.value;
   //   let clonedArray = { ...this.state };
-    
+
   //   let filteredArray = clonedArray.movieList.filter(movie => {
   //     // console.log(movie.name.toLowerCase().indexOf(searchtext.toLowerCase()))
   //     return movie.Title.toLowerCase().indexOf(searchtext.toLowerCase()) >= 0;
@@ -48,13 +48,13 @@ export class Movies extends Component {
             <nav className="navbar navbar-dark bg-primary mb-3">
               <div className="container">
                 <a className="navbar-brand" href="/">Movie List</a>
-                        <input 
-                        className="form-control mr-sm-2" 
-                        type="text" value={this.value} 
-                        defaultValue="" 
-                        placeholder="Search" 
-                        aria-label="Search" 
-                        onChange={e => this.SearchMovie(e)} />        
+                <input
+                  className="form-control mr-sm-2"
+                  type="text" value={this.value}
+                  defaultValue=""
+                  placeholder="Search"
+                  aria-label="Search"
+                  onChange={e => this.SearchMovie(e)} />
               </div>
             </nav>
             <div className="container">
@@ -69,7 +69,7 @@ export class Movies extends Component {
                             to={`/films/${film.imdbID}`}
                             className="list-group-item list-group-item-action"
                             style={{ fontSize: "25px" }}
-                            >
+                          >
                             <img src={film.Poster} alt="" />
                             <div><h3>{film.Title}</h3><p>{film.Year}</p><p>{film.Director}</p></div>
                           </Link>

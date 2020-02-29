@@ -33,14 +33,14 @@ export default class LightboxExample extends Component {
         {isOpen && (
           <Lightbox
             mainSrc={this.state.images[photoIndex]}
-            nextSrc={this.state.images[(photoIndex + 1) % this.state.images.length]}
-            prevSrc={this.state.images[(photoIndex + this.state.images.length - 1) % this.state.images.length]}
+            // nextSrc={this.state.images[(photoIndex + 1) % this.state.images.length]}
+            // prevSrc={this.state.images[(photoIndex + this.state.images.length - 1) % this.state.images.length]}
             onCloseRequest={() => this.setState({ isOpen: false })}
-            onMovePrevRequest={() =>
-              this.setState({
-                photoIndex: (photoIndex + this.state.images.length - 1) % this.state.images.length,
-              })
-            }
+            // onMovePrevRequest={() =>
+            //   this.setState({
+            //     photoIndex: (photoIndex + this.state.images.length - 1) % this.state.images.length,
+            //   })
+            // }
             onMoveNextRequest={() =>
               this.setState({
                 photoIndex: (photoIndex + 1) % this.state.images.length,
