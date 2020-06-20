@@ -48,7 +48,7 @@ const MovieElement = props => {
           </tbody>
         </table>
         <button className="btn btn-primary" style={{width: "110px"}} >
-        <Link to={`/filmItem/${foundMovie.imdbID}`} style={{color: "white"}} >Movie info</Link>
+        <Link to={`/react-films/filmItem/${foundMovie.imdbID}`} style={{color: "white"}} >Movie info</Link>
         </button>
       </div>
     </div>

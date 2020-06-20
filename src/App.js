@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       <Navbar />
       <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/about' component={About} />
-        <Route path='/films' component={Movies} />
-        <Route path="/filmItem/:imdbID" component={MovieItem} />
+        <Route exact path='/react-films/' component={Home} />
+        <Route path='/react-films/about' component={About} />
+        <Route path='/react-films/films' component={Movies} />
+        <Route path="/react-films/filmItem/:imdbID" component={MovieItem} />
       </Switch>
     </div>
   );

@@ -66,7 +66,7 @@ export class Movies extends Component {
                         <div key={idx} className="list-movies">
 
                           <Link
-                            to={`/films/${film.imdbID}`}
+                            to={`/react-films/films/${film.imdbID}`}
                             className="list-group-item list-group-item-action"
                             style={{ fontSize: "25px" }}
                           >
@@ -78,7 +78,7 @@ export class Movies extends Component {
                     })}
                   </div>
                 </div>
-                <Route path="/films/:imdbID" component={MovieElement} />
+                <Route path="/react-films/films/:imdbID" component={MovieElement} />
               </div>
             </div>
           </div>
